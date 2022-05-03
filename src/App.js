@@ -1,9 +1,10 @@
 import React from 'react'
 import { useEffect, useState } from 'react' 
 import Header from './components/Header'
-import TodoForm from './components/todoForm';
+// import TodoForm from './components/todoForm';
 import TodoList from './components/todoList';
-import ClearTodos from './components/clearTodos';
+// import ClearTodos from './components/clearTodos';
+
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -77,9 +78,9 @@ function App() {
               onChange={(e) => setTodo(e.target.value)}
               value={todo} 
             />
-            <button type="submit"> <i class="fas fa-plus"></i> </button>
+            <button type="submit"> <i class="fas fa-plus"></i>+</button>
           </form>
-          <TodoForm handleSubmit={handleSubmit}/>
+          {/* <TodoForm handleSubmit={handleSubmit}/> */}
           <TodoList 
             handleSubmit={handleSubmit}
             removeTodo={removeTodo}
