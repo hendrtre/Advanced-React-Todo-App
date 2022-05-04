@@ -1,5 +1,5 @@
 // import react, { Component } from 'react'
-import react from 'react'
+// import react from 'react'
 import { useEffect, useState } from 'react' 
 
 
@@ -7,8 +7,8 @@ import { useEffect, useState } from 'react'
 function TodoForm() {
     const [todos, setTodos] = useState([]);
     const [todo, setTodo] = useState("");
-    const [todoEditing, setTodoEditing] = useState(null);
-    const [editingText, setEditingText] = useState("");
+    // const [todoEditing, setTodoEditing] = useState(null);
+    // const [editingText, setEditingText] = useState("");
   
     useEffect(() => {
       const json = localStorage.getItem("todos");
@@ -35,31 +35,31 @@ function TodoForm() {
       setTodo("");
     }
   
-    function removeTodo(id) {
-      let updatedTodos = [...todos].filter((todo) => todo.id !== id);
-      setTodos(updatedTodos);
-    }
+    // function removeTodo(id) {
+    //   let updatedTodos = [...todos].filter((todo) => todo.id !== id);
+    //   setTodos(updatedTodos);
+    // }
   
-    function toggleComplete(id) {
-      let updatedTodos = [...todos].map((todo) => {
-        if (todo.id === id) {
-          todo.completed = !todo.completed;
-        }
-        return todo;
-      });
-      setTodos(updatedTodos);
-    }
+    // function toggleComplete(id) {
+    //   let updatedTodos = [...todos].map((todo) => {
+    //     if (todo.id === id) {
+    //       todo.completed = !todo.completed;
+    //     }
+    //     return todo;
+    //   });
+    //   setTodos(updatedTodos);
+    // }
   
-    function submitEdits(id) {
-      const updatedTodos = [...todos].map((todo) => {
-        if (todo.id === id) {
-          todo.text = editingText;
-        }
-        return todo;
-      });
-      setTodos(updatedTodos);
-      setTodoEditing(null);
-    }
+    // function submitEdits(id) {
+    //   const updatedTodos = [...todos].map((todo) => {
+    //     if (todo.id === id) {
+    //       todo.text = editingText;
+    //     }
+    //     return todo;
+    //   });
+    //   setTodos(updatedTodos);
+    //   setTodoEditing(null);
+    // }
     // render() {
         return (
           <form class="inputField" onSubmit={handleSubmit}>

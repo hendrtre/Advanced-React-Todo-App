@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 
 function TodoList() {
     const [todos, setTodos] = useState([]);
-    const [todo, setTodo] = React.useState("");
+    // const [todo, setTodo] = React.useState("");
     const [todoEditing, setTodoEditing] = React.useState(null);
     const [editingText, setEditingText] = React.useState("");
   
@@ -21,17 +21,17 @@ function TodoList() {
       localStorage.setItem("todos", json);
     }, [todos]);
   
-    function handleSubmit(e) {
-      e.preventDefault();
+    // function handleSubmit(e) {
+    //   e.preventDefault();
   
-      const newTodo = {
-        id: new Date().getTime(),
-        text: todo,
-        completed: false,
-      };
-      setTodos([...todos].concat(newTodo));
-      setTodo("");
-    }
+    //   const newTodo = {
+    //     id: new Date().getTime(),
+    //     text: todo,
+    //     completed: false,
+    //   };
+    //   setTodos([...todos].concat(newTodo));
+    //   setTodo("");
+    // }
   
     function removeTodo(id) {
       let updatedTodos = [...todos].filter((todo) => todo.id !== id);
